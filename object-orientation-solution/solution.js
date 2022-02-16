@@ -4,44 +4,35 @@
   Give it a key of name with the value being your name, and another key of age with the value being your age.
 */
 
+//Code here
 let me = {
-  name : "Palmer",
-  age : 25
+  name: "Joey",
+  age: 32
 }
-
-// console.log(me)
 
 //////////////////////////// PROBLEM 2 ////////////////////////////
 
 //Create an object saved to the variable dog.
 //The dog object should have the following properties:
 //name (a string), color (a string), age (a number),
-//and goodBoy/goodGirl (a boolean).
-
+//and goodBoy (a boolean).
 
 let dog = {
-  name : "Fido",
-  color : "Brown",
-  age : 24,
-  goodBoy : false
-
+  name: "Cody",
+  color: "Apricot",
+  age: 3,
+  goodBoy: true
 }
-
-// console.log(dog)
 
 //////////////////////////// PROBLEM 3 ////////////////////////////
 /* Print out the name of the dog you created in problem 2 using dot-notation. */
 
-
-// console.log(dog.name)
-
+console.log(dog.name)
 
 //////////////////////////// PROBLEM 4 ////////////////////////////
 /* Print out the color of the dog you created in problem 2 using bracket-notation. */
 
-// console.log(dog["color"])
-
-
+console.log(dog['color'])
 
 //////////////////////////// PROBLEM 5 ////////////////////////////
 /*
@@ -49,36 +40,33 @@ let dog = {
   Have the values to those keys be strings that are equal to your favorite thing in that category.
 */
 
+//Code here
 let favoriteThings = {
-  band : "Red Hot Chili Peppers",
-  food : "Pizza",
-  person : "Donald Trump",
-  book : "The Great Gatsby",
-  moive : "Interstellar",
-  holiday : "thanksgiving"
+  band: "Rolling Stones",
+  food: "Pizza",
+  person: "Winston Churchill",
+  book: "Harry Potter",
+  movie: "Frozen",
+  holiday: "Road Trip"
 }
-
-
-
 /*
-  After you've made your object, use bracket or dot notation to add another key named 'car' 
-  with the value being your favorite car and then another key named 'show' with the value being your favorite show.
+  After you've made your object, use bracket or dot notation to add another key named 'car' with the value being your favorite car and then another key named 'brand' with the value being your favorite brand.
 */
 
-favoriteThings.car = "Ferrari"
-favoriteThings["show"] = "Lost"
-
-
-// console.log(favoriteThings)
+//Code here
+favoriteThings["car"] = "Toyota"
+favoriteThings["brand"] = "Apple"
 /*
   Now use bracket or dot notation to change the value of the food key in your favoriteThings object to be 'Chicken Nuggets'
-  and change the value of the book key in your favoriteThings object to be 'Harry Potter'. 
-  (If they were either of those things already, change them to something else.)
+  and change the value of the book key in your favoriteThings object to be 'Harry Potter'.
 */
 
-favoriteThings.food = "chicken nugs"
-favoriteThings["book"] = "harry potter"
-// console.log(favoriteThings)
+//Code here
+favoriteThings["food"] = "Chicken Nuggets"
+favoriteThings.book = "Harry Potter"
+
+
+
 
 //////////////////////////// PROBLEM 6 ////////////////////////////
 
@@ -95,8 +83,9 @@ var carDetails = {
   Use object destructuring to save the property values from the object carDetails into new variables. 
 */
 
-let {color, make, model, year} = carDetails
+//Code Here
 
+const {color, make, model, year} = car
 
 
 
@@ -108,25 +97,15 @@ let {color, make, model, year} = carDetails
   The property names are firstName, lastName, and title.
 */
 
-let obj = {
-  title : "Mr",
-  firstName : "Palmer",
-  lastName : "Hatch",
-
-}
-
-
 function greeting( obj ) {
-   let {title, firstName, lastName } = obj
-  
+  //Code Here
+  const {title, firstName, lastName} = obj
   // Do not edit the code below.
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
-  
   // Do not edit the code above.
 }
 
 
-// let hi = greeting
 
 //////////////////////////// PROBLEM 8 ////////////////////////////
 
@@ -138,20 +117,13 @@ function greeting( obj ) {
   Sum up the values and return the total number.
 */
 
-let land = {
-  utah : 10,
-  california : 10,
-  texas : 10,
-  arizona : 10
-}
+//Code Here
 
-function totalPopulation (land) {
-  const {utah, california, texas, arizona} = land
+function totalPopulation(obj) {
+  const {utah, california, texas, arizona} = obj
   return utah + california + texas + arizona
-  
 }
 
-// console.log(land)
 
 //////////////////////////// PROBLEM 9 ////////////////////////////
 
@@ -162,21 +134,15 @@ function totalPopulation (land) {
   Use object destructuring to save the property values to new variables. 
   Push these new variables to an array and return the array. 
 */
-// foodArr = []
 
-// let nutrient = {
-//   carb : "a lot",
-//   fat : "a little",
-//   protein: "so so"
-// }
+//Code Here
 
-// function ingredients (nutrient){
-//  const {carb, fat, protein} = nutrient
-//  return [carb, fat, protein]
-// }
+function ingredients(obj) {
+  const {carb, fat, protein} = obj
+  return [carb, fat, protein]
+}
 
-// let food = ingredients(nutrient)
-// console.log(foodArr)
+
 
 //////////////////////////// PROBLEM 10 ////////////////////////////
 // Do not edit the code below.
@@ -188,11 +154,6 @@ var user = {
   birthday: '05/02/1990',
   username: 'bryansmith33'
 };
-
-user.name = "Bryan G. Smith"
-user.email = "Bryan.smith@devmouta.in"
-
-// console.log(user)
 // Do not edit the code above.
 
 /*
@@ -201,16 +162,18 @@ user.email = "Bryan.smith@devmouta.in"
   Make that change without modifying the original object code above.
 */
 
-
-
+//Code Here
+user.name = "Bryan G. Smith"
+user.email = "bryan.smith@devmounta.in"
 
 //////////////////////////// PROBLEM 11 ////////////////////////////
 /*
-  Using the user object above, delete the users age off of the object.
+  Using the user object above, delete the users age off of the object. Print out the user object to verify it no longer contains the age property.
 */
 
+//Code Here
 delete user.age
-// console.log(user)
+console.log(user)
 
 //////////////////////////// PROBLEM 12 ////////////////////////////
 /*
@@ -219,18 +182,17 @@ delete user.age
   Print the name of your cat instance using dot notation.
 */
 
-class Cat{
-  constructor (name, age, color){
-  this.name = name;
-  this.age = age;
-  this.color = color;
+class Cat {
+  constructor(name, age, color) {
+    this.name = name
+    this.age = age
+    this.color = color
   }
 }
 
-const big =  new Cat("tiger", 2, "Red and Black")
+const thunder = new Cat('Thunder', 3, 'black & brown')
 
-// console.log (big.name)
-
+console.log(thunder.name)
 
 //////////////////////////// PROBLEM 13 ////////////////////////////
 /*
@@ -241,20 +203,20 @@ const big =  new Cat("tiger", 2, "Red and Black")
 */
 
 class Wizard {
-  constructor(name, age, favoriteSpell){
-  this.name = name;
-  this.age = age;
-  this.favoriteSpell = favoriteSpell;
-}
-castSpell() {
-  console.log(`${this.name} has cast ${this.favoriteSpell}`)
-}
+  constructor(name, age, favoriteSpell) {
+    this.name = name
+    this.age = age
+    this.favoriteSpell = favoriteSpell
+  }
+
+  castSpell() {
+    console.log(`${this.name} has cast ${this.favoriteSpell}`)
+  }
 }
 
-const caster1 = new Wizard("Dumbledor", 800, "Expelliamous")
+const ron = new Wizard('Ron', 11, 'Eat slugs, Malfoy')
 
-// console.log(caster1.name)
-// caster1.castSpell()
+ron.castSpell()
 
 //////////////////////////// PROBLEM 14 ////////////////////////////
 /*
@@ -279,29 +241,29 @@ const caster1 = new Wizard("Dumbledor", 800, "Expelliamous")
     to be newPrice.
 */
 
-class Phone{
-  constructor(brand, model, storage, color, price){
-  this.brand = brand;
-  this.model = model;
-  this.storage = storage
-  this.color = color
-  this.price = price
-  this.sold = false
-}
-sell() {
-  this.sold = true
-  console.log(`${this.brand} ${this.model} has been sold. Is it sold? ${this.sold}`)
-}
-changePrice(newPrice){
-  this.price = newPrice
-  console.log(this.price)
-}
+//Code Here
+
+class Phone {
+  constructor(brand, model, storage, color, price) {
+    this.brand = brand
+    this.model = model
+    this.storage = storage
+    this.color = color
+    this.price = price
+    this.sold = false
+  }
+
+  sell() {
+    this.sold = true 
+    console.log(`${this.brand} ${this.model} has been sold.`)
+  }
+
+  changePrice(newPrice) {
+    this.price = newPrice
+  }
 }
 
-const iphone = new Phone("apple", "12" , "12G","blue", 900,)
-
-iphone.sell()
-//   iphone.changePrice(400)
+  
 /*
     Next make three new phone instances using your class.
     Send in values of your choice. They should match these data types:
@@ -314,6 +276,11 @@ iphone.sell()
 
 //Code Here
 
+let phoneOne = new Phone('Apple', 'iPhone', 128, 'blue', 1000)
+let phoneTwo = new Phone('Samsung', 'Galaxy S21', 256, 'silver', 1200)
+let phoneThree = new Phone('OnePlus', 'OnePlus 9 5G', 128, 'balck', 800)
+
+
 /* 
   Call the changePrice function on one of your phones, 
   don't forget to pass in a new price 
@@ -323,14 +290,21 @@ iphone.sell()
 
 //Code Here 
 
+phoneOne.changePrice(900)
+
+console.log(phoneOne)
 
 /*
   Now call the sell method on one of your other phone objects
 
-  Print the value of that phone's sell property to make sure it's been changed to true
+  Print the value of that phone's sold property to make sure it's been changed to true
 */
 
+//Code Here 
 
+phoneThree.sell()
+
+console.log(phoneThree.sold)
 
 
 //////////////////////////// PROBLEM 15 ////////////////////////////
@@ -338,8 +312,6 @@ iphone.sell()
 /*
   Use the spread operator to create a copy of the colors object below.
   Store the copy in a variable called colorsCopy.
-  Note: We did not cover the spread operator in class. We do not expect you to know how to use it. 
-  Challenge yourself by going online and researching what the spread operator is and how to use it.
 */
 
 //do not edit this object
@@ -350,10 +322,10 @@ const colors = {
 }
 //do not edit this object
 
+//Code Here 
 
-let colorsCopy = {...colors}
+const colorsCopy = {...colors}
 
-// console.log(colorsCopy)
 /*
  Now use the spread operator to combine the following 2 objects into one. 
  Call the new variable helensInfo. 
@@ -378,11 +350,11 @@ const shippingInfo = {
 }
 //do not edit the objects above
 
-let helensInfo = {...contactInfo, ...shippingInfo}
+//Code Here
+const helensInfo = {...contactInfo, ...shippingInfo}
 
-// console.log(helensInfo)
-//Print helensInfo to see what it looks like, there should be no repeating properties.
-
+//print helensInfo to see what it looks like, there should be no repeating properties
+console.log(helensInfo)
 
 //////////////////////////// PROBLEM 16 ////////////////////////////
 
@@ -390,14 +362,26 @@ let helensInfo = {...contactInfo, ...shippingInfo}
   Create a class called Vehicle. Make sure to call your constructor, 
   and require these 3 parameters: capacity (how many passengers), color, and mileage.
 
-  Write a method inside your class called 'move'.
-  The move function should take in one parameter, miles.
-  Inside the function, add the number of miles to the object's mileage.
-  And finally, print the value of the mileage.
+  Write a method inside your class called 'move'
+  The move function should take in one parameter, miles 
+  Inside the function, add the number of miles to the object's mileage
+  And finally, print the value of the mileage
 */
 
-Code Here 
+//Code Here 
 
+class Vehicle {
+  constructor(capacity, color, mileage) {
+    this.capacity = capacity
+    this.color = color
+    this.mileage = mileage
+  }
+
+  move(miles) {
+    this.mileage += miles
+    console.log(this.mileage)
+  }
+} 
 
 /*
   Create a vehicle using your new class and save it to a variable called myFirstVehicle
@@ -405,6 +389,7 @@ Code Here
 
 //Code Here
 
+const myFirstVehicle = new Vehicle(4, 'blue', 80000)
 
 /* 
   Now we'll create a class that's based off of the vehicle class. 
@@ -416,22 +401,33 @@ Code Here
 
 //Code Here
 
+class Motorcycle extends Vehicle {
+  constructor(capacity, color, mileage, make, isCool) {
+    super(capacity, color, mileage)
+    this.make = make
+    this.isCool = isCool
+  }
+}
+
 /*
   Create a Motorcycle using your new class and save it to a variable called myFirstMotorcycle
 */
 
 //Code Here 
 
+const myFirstMotorcycle = new Motorcycle(1, 'black', 3000, 'Ducati', true)
+
 /*
   Call the move function on myFirstMotorcycle (don't forget the parameter)
 */
+
+myFirstMotorcycle.move(100)
 
 /*
   Let's make another class based off of Vehicle. 
 
   Write a class called Boat that *extends* the Vehicle class. The constructor should take in
-  all the same arguments as Vehicle plus 3 new ones: 
-  name (boats gotta have cool names), type (ski boat, yacht, etc), and isSeaworthy.
+  all the same arguments as Vehicle plus 3 new ones: name (boats gotta have cool names), type (ski boat, yacht, etc), and isSeaworthy.
 
   Create a method inside of the Boat class called checkSeaworthiness 
   Inside the method, check to see if the boat is seaworthy
@@ -444,6 +440,27 @@ Code Here
 
 //Code Here
 
+class Boat extends Vehicle {
+  constructor(capacity, color, mileage, name, type, isSeaworthy) {
+    super(capacity, color, mileage)
+    this.name = name
+    this.type = type
+    this.isSeaworthy = isSeaworthy
+  }
+
+  checkSeaworthiness() {
+    if (this.isSeaworthy) {
+      console.log(`The ${this.type} ${this.name} is seaworthy!`)
+    } else {
+      console.log(`You need to get your ${this.type} in shape!`)
+    }
+  }
+
+  performMaintenance() {
+    this.isSeaworthy = true
+  }
+}
+
 
 /*
   Create a new boat using your class. You can choose whatever values you like for all the 
@@ -451,10 +468,14 @@ Code Here
 */
 
 //Code Here
+const myFirstBoat = new Boat(10, 'red', 20000, 'Mark 37', 'yacht', false)
+
 
 /*
   Call the checkSeaworthiness method on your new boat
 */
+
+myFirstBoat.checkSeaworthiness()
 
 //Code Here
 
@@ -463,9 +484,11 @@ Code Here
 */
 
 //Code Here 
+myFirstBoat.performMaintenance()
 
 /*
   Check the seaworthiness once more (you should be ready for the water!)
 */
 
 //Code Here
+myFirstBoat.checkSeaworthiness()
